@@ -1,14 +1,90 @@
 <div class="page-container">
   <header class="page-header">
     <button class="back-button" (click)="goBack()">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M19 12H5M12 19l-7-7 7-7"/>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M19 12H5M12 19l-7-7 7-7" />
       </svg>
     </button>
-    <h1 class="page-title">Night Adhkar</h1>
+
   </header>
 
   <main class="content">
-    <p class="placeholder">Night adhkar content will go here</p>
+    <div class="adhkar-container" (swipeleft)="onSwipeLeft()" (swiperight)="onSwipeRight()">
+      @for (dhikr of adhkar; track dhikr.arabic; let i = $index) {
+      <div class="dhikr-group" [class.active]="currentIndex === i">
+        <!-- Card 1: Arabic Text -->
+        <div class="card arabic-card">
+          <div class="adhkar-label">Adhkar {{ i + 1 }}</div>
+          @if (i === 0) {
+          <div class="bismillah">أَعُوذُ بِاللهِ مِنَ الشَّيْطَانِ الرَّجِيمِ</div>
+          } @else if (i >= 1 && i <= 3) {
+          <div class="bismillah">بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ</div>
+          } @else {
+          <div class="bismillah-separator"></div>
+          }
+          <div class="arabic-text">{{ dhikr.arabic }}</div>
+          <div class="repetition-indicator">
+            @if (!showCheckmark[i]) {
+            <div class="repetition-circle" (click)="onRepetitionClick(i)">
+              @if (remainingCounts[i] === dhikr.repetitions) {
+              {{ dhikr.repetitions }}×
+              } @else {
+              {{ remainingCounts[i] }} remaining
+              }
+            </div>
+            } @else {
+            <div class="repetition-circle checkmark">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </div>
+            }
+          </div>
+        </div>
+
+        <!-- Card 2: Translation (Collapsible) -->
+        <div class="card translation-card">
+          <button class="card-toggle" (click)="toggleTranslation(i)">
+            <span class="card-title">Translation</span>
+            <svg class="toggle-icon" [class.expanded]="translationExpanded[i]" xmlns="http://www.w3.org/2000/svg"
+              width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          @if (translationExpanded[i]) {
+          <div class="card-content">
+            <p>{{ dhikr.translation }}</p>
+          </div>
+          }
+        </div>
+
+        <!-- Card 3: Sources (Collapsible) -->
+        @if (dhikr.sources && dhikr.sources.length > 0) {
+        <div class="card sources-card">
+          <button class="card-toggle" (click)="toggleSources(i)">
+            <span class="card-title">Sources</span>
+            <svg class="toggle-icon" [class.expanded]="sourcesExpanded[i]" xmlns="http://www.w3.org/2000/svg" width="20"
+              height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          @if (sourcesExpanded[i]) {
+          <div class="card-content">
+            <ul>
+              @for (source of dhikr.sources; track source) {
+              <li>{{ source }}</li>
+              }
+            </ul>
+          </div>
+          }
+        </div>
+        }
+      </div>
+      }
+    </div>
   </main>
 </div>

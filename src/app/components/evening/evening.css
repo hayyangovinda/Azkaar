@@ -29,7 +29,7 @@
 .back-button {
   background: rgba(255, 255, 255, 0.5);
   border: none;
-  color: #667eea;
+  color: #ea6666;
   cursor: pointer;
   padding: 12px;
   margin-bottom: 20px;
@@ -44,7 +44,7 @@
 }
 
 .back-button:hover {
-  background: #667eea;
+  background: #ea6666;
   color: white;
   transform: scale(1.1);
   box-shadow: 0 6px 16px rgba(102, 126, 234, 0.4);
@@ -113,7 +113,7 @@
   text-align: center;
   font-size: 1rem;
   font-weight: 600;
-  color: #667eea;
+  color: #ea6666;
   margin-bottom: 20px;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -199,7 +199,7 @@
 .bismillah {
   font-family: 'Amiri', 'Traditional Arabic', 'Arial', serif;
   font-size: 1.3rem;
-  color: #667eea;
+  color: #ea6666;
   text-align: center;
   margin-bottom: 20px;
   padding-top: 15px;
@@ -251,11 +251,11 @@
 }
 
 .translation-card .card-title {
-  color: #10b981;
+  color: #9a9a9a;
 }
 
 .sources-card .card-title {
-  color: #764ba2;
+  color: #9a9a9a;
 }
 
 .toggle-icon {
@@ -263,11 +263,11 @@
 }
 
 .translation-card .toggle-icon {
-  color: #10b981;
+  color: #9a9a9a;
 }
 
 .sources-card .toggle-icon {
-  color: #764ba2;
+  color: #9a9a9a;
 }
 
 .toggle-icon.expanded {
@@ -314,7 +314,7 @@
 
 .sources-card .card-content li:before {
   content: '•';
-  color: #764ba2;
+  color: #9a9a9a;
   font-weight: bold;
   font-size: 1.2rem;
   position: absolute;
@@ -341,7 +341,7 @@
 .indicator.active {
   width: 30px;
   border-radius: 5px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #667eea 0%, #9a9a9a 100%);
 }
 
 .indicator:hover {
