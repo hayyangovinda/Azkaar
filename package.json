@@ -49,6 +49,7 @@
     "@angular/cli": "^20.1.6",
     "@angular/compiler-cli": "^20.1.0",
     "@capacitor/assets": "^3.0.5",
+    "@types/hammerjs": "^2.0.46",
     "@types/jasmine": "~5.1.0",
     "jasmine-core": "~5.8.0",
     "karma": "~6.4.0",

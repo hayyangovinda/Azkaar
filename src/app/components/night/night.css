@@ -339,3 +339,7 @@
     font-size: 1rem;
   }
 }
+
+.adhkar-container {
+  touch-action: pan-y !important;
+}
