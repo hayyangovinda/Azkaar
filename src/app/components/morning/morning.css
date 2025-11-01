@@ -78,3 +78,236 @@
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
+
+.adhkar-container {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.dhikr-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  border: none;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.card-number {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.repetition-indicator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0 10px 0;
+  gap: 15px;
+}
+
+.repetition-indicator::before,
+.repetition-indicator::after {
+  content: '';
+  flex: 1;
+  height: 2px;
+  background: linear-gradient(to right, transparent, rgba(102, 126, 234, 0.3), transparent);
+}
+
+.repetition-circle {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: white;
+  min-width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  font-weight: bold;
+  box-shadow: 0 4px 16px rgba(16, 185, 129, 0.3);
+  position: relative;
+}
+
+.repetition-circle::after {
+  content: 'times';
+  position: absolute;
+  bottom: -20px;
+  font-size: 0.75rem;
+  color: #059669;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+.bismillah {
+  font-family: 'Amiri', 'Traditional Arabic', 'Arial', serif;
+  font-size: 1.3rem;
+  color: #667eea;
+  text-align: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid rgba(102, 126, 234, 0.2);
+  direction: rtl;
+  line-height: 2;
+  font-weight: 600;
+}
+
+.arabic-text {
+  font-family: 'Amiri', 'Traditional Arabic', 'Arial', serif;
+  font-size: 1.8rem;
+  line-height: 2.5;
+  color: #1a1a1a;
+  text-align: center;
+  direction: rtl;
+  margin: 20px 0;
+  font-weight: 500;
+}
+
+.card-toggle {
+  width: 100%;
+  background: transparent;
+  border: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.card-toggle:hover .card-title {
+  opacity: 0.8;
+}
+
+.card-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: opacity 0.3s ease;
+}
+
+.translation-card .card-title {
+  color: #10b981;
+}
+
+.sources-card .card-title {
+  color: #764ba2;
+}
+
+.toggle-icon {
+  transition: transform 0.3s ease;
+}
+
+.translation-card .toggle-icon {
+  color: #10b981;
+}
+
+.sources-card .toggle-icon {
+  color: #764ba2;
+}
+
+.toggle-icon.expanded {
+  transform: rotate(180deg);
+}
+
+.card-content {
+  padding-top: 20px;
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.translation-card .card-content p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #2d3748;
+  margin: 0;
+  font-family: 'Georgia', 'Times New Roman', serif;
+}
+
+.sources-card .card-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sources-card .card-content li {
+  padding: 8px 0;
+  color: #4a5568;
+  font-size: 0.95rem;
+  position: relative;
+  padding-left: 20px;
+}
+
+.sources-card .card-content li:before {
+  content: '•';
+  color: #764ba2;
+  font-weight: bold;
+  font-size: 1.2rem;
+  position: absolute;
+  left: 0;
+}
+
+@media (max-width: 768px) {
+  .card {
+    padding: 20px;
+  }
+
+  .arabic-text {
+    font-size: 1.5rem;
+    line-height: 2.2;
+  }
+
+  .bismillah {
+    font-size: 1.1rem;
+  }
+
+  .translation-card .card-content p {
+    font-size: 1rem;
+  }
+
+  .dhikr-group {
+    gap: 10px;
+  }
+
+  .adhkar-container {
+    gap: 40px;
+  }
+}

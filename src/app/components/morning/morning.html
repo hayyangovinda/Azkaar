@@ -9,6 +9,56 @@
   </header>
 
   <main class="content">
-    <p class="placeholder">Morning adhkar content will go here</p>
+    <div class="adhkar-container">
+      @for (dhikr of adhkar; track dhikr.arabic; let i = $index) {
+      <div class="dhikr-group">
+        <!-- Card 1: Arabic Text -->
+        <div class="card arabic-card">
+          <div class="card-number">{{ i + 1 }}</div>
+          <div class="bismillah">أَعُوذُ بِاللهِ مِنَ الشَّيْطَانِ الرَّجِيمِ</div>
+          <div class="arabic-text">{{ dhikr.arabic }}</div>
+          <div class="repetition-indicator">
+            <div class="repetition-circle">{{ dhikr.repetitions }}×</div>
+          </div>
+        </div>
+
+        <!-- Card 2: Translation (Collapsible) -->
+        <div class="card translation-card">
+          <button class="card-toggle" (click)="toggleTranslation(i)">
+            <span class="card-title">Translation</span>
+            <svg class="toggle-icon" [class.expanded]="translationExpanded[i]" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          @if (translationExpanded[i]) {
+          <div class="card-content">
+            <p>{{ dhikr.translation }}</p>
+          </div>
+          }
+        </div>
+
+        <!-- Card 3: Sources (Collapsible) -->
+        @if (dhikr.sources && dhikr.sources.length > 0) {
+        <div class="card sources-card">
+          <button class="card-toggle" (click)="toggleSources(i)">
+            <span class="card-title">Sources</span>
+            <svg class="toggle-icon" [class.expanded]="sourcesExpanded[i]" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          @if (sourcesExpanded[i]) {
+          <div class="card-content">
+            <ul>
+              @for (source of dhikr.sources; track source) {
+              <li>{{ source }}</li>
+              }
+            </ul>
+          </div>
+          }
+        </div>
+        }
+      </div>
+      }
+    </div>
   </main>
 </div>
