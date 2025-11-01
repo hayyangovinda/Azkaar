@@ -87,12 +87,5 @@
       </div>
       }
     </div>
-
-    <!-- Page Indicators -->
-    <div class="page-indicators">
-      @for (dhikr of adhkar; track dhikr.arabic; let i = $index) {
-      <div class="indicator" [class.active]="currentIndex === i" (click)="currentIndex = i"></div>
-      }
-    </div>
   </main>
 </div>
