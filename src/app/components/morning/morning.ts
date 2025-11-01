@@ -237,8 +237,15 @@ export class Morning {
   currentIndex = 0;
   translationExpanded: { [key: number]: boolean } = {};
   sourcesExpanded: { [key: number]: boolean } = {};
+  remainingCounts: { [key: number]: number } = {};
+  showCheckmark: { [key: number]: boolean } = {};
 
-  constructor(private router: Router) {}
+  constructor(private router: Router) {
+    // Initialize remaining counts for each dhikr
+    this.adhkar.forEach((dhikr, index) => {
+      this.remainingCounts[index] = dhikr.repetitions;
+    });
+  }
 
   goBack(): void {
     this.router.navigate(['/']);
@@ -261,6 +268,24 @@ export class Morning {
   onSwipeRight(): void {
     if (this.currentIndex > 0) {
       this.currentIndex--;
+    }
+  }
+
+  onRepetitionClick(index: number): void {
+    if (this.remainingCounts[index] > 0) {
+      this.remainingCounts[index]--;
+
+      // When count reaches 0, show checkmark animation
+      if (this.remainingCounts[index] === 0) {
+        this.showCheckmark[index] = true;
+
+        // After animation, move to next dhikr (if available)
+        setTimeout(() => {
+          if (this.currentIndex < this.adhkar.length - 1) {
+            this.currentIndex++;
+          }
+        }, 630); // Wait for animation to complete
+      }
     }
   }
 }
