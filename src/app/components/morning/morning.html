@@ -1,11 +1,12 @@
 <div class="page-container">
   <header class="page-header">
     <button class="back-button" (click)="goBack()">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M19 12H5M12 19l-7-7 7-7"/>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M19 12H5M12 19l-7-7 7-7" />
       </svg>
     </button>
-    <h1 class="page-title">Morning Adhkar</h1>
+
   </header>
 
   <main class="content">
@@ -14,7 +15,8 @@
       <div class="dhikr-group">
         <!-- Card 1: Arabic Text -->
         <div class="card arabic-card">
-          <div class="card-number">{{ i + 1 }}</div>
+          <!-- <div class="card-number">{{ i + 1 }}</div> -->
+          <div class="adhkar-label">Adhkar {{ i + 1 }}</div>
           <div class="bismillah">أَعُوذُ بِاللهِ مِنَ الشَّيْطَانِ الرَّجِيمِ</div>
           <div class="arabic-text">{{ dhikr.arabic }}</div>
           <div class="repetition-indicator">
@@ -26,7 +28,9 @@
         <div class="card translation-card">
           <button class="card-toggle" (click)="toggleTranslation(i)">
             <span class="card-title">Translation</span>
-            <svg class="toggle-icon" [class.expanded]="translationExpanded[i]" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <svg class="toggle-icon" [class.expanded]="translationExpanded[i]" xmlns="http://www.w3.org/2000/svg"
+              width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
               <polyline points="6 9 12 15 18 9"></polyline>
             </svg>
           </button>
@@ -42,7 +46,9 @@
         <div class="card sources-card">
           <button class="card-toggle" (click)="toggleSources(i)">
             <span class="card-title">Sources</span>
-            <svg class="toggle-icon" [class.expanded]="sourcesExpanded[i]" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <svg class="toggle-icon" [class.expanded]="sourcesExpanded[i]" xmlns="http://www.w3.org/2000/svg" width="20"
+              height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
               <polyline points="6 9 12 15 18 9"></polyline>
             </svg>
           </button>

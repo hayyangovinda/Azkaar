@@ -123,6 +123,16 @@
   box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
 }
 
+.adhkar-label {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #667eea;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
 .repetition-indicator {
   display: flex;
   justify-content: center;
@@ -172,8 +182,8 @@
   color: #667eea;
   text-align: center;
   margin-bottom: 20px;
-  padding-bottom: 15px;
-  border-bottom: 2px solid rgba(102, 126, 234, 0.2);
+  padding-top: 15px;
+  border-top: 2px solid rgba(102, 126, 234, 0.2);
   direction: rtl;
   line-height: 2;
   font-weight: 600;
