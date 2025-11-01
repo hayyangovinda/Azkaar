@@ -10,14 +10,20 @@
   </header>
 
   <main class="content">
-    <div class="adhkar-container">
+    <div class="adhkar-container" (swipeleft)="onSwipeLeft()" (swiperight)="onSwipeRight()">
       @for (dhikr of adhkar; track dhikr.arabic; let i = $index) {
-      <div class="dhikr-group">
+      <div class="dhikr-group" [class.active]="currentIndex === i">
         <!-- Card 1: Arabic Text -->
         <div class="card arabic-card">
           <!-- <div class="card-number">{{ i + 1 }}</div> -->
           <div class="adhkar-label">Adhkar {{ i + 1 }}</div>
+          @if (i === 0) {
           <div class="bismillah">أَعُوذُ بِاللهِ مِنَ الشَّيْطَانِ الرَّجِيمِ</div>
+          } @else if (i >= 1 && i <= 3) {
+          <div class="bismillah">بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ</div>
+          } @else {
+          <div class="bismillah-separator"></div>
+          }
           <div class="arabic-text">{{ dhikr.arabic }}</div>
           <div class="repetition-indicator">
             <div class="repetition-circle">{{ dhikr.repetitions }}×</div>
@@ -64,6 +70,13 @@
         </div>
         }
       </div>
+      }
+    </div>
+
+    <!-- Page Indicators -->
+    <div class="page-indicators">
+      @for (dhikr of adhkar; track dhikr.arabic; let i = $index) {
+      <div class="indicator" [class.active]="currentIndex === i" (click)="currentIndex = i"></div>
       }
     </div>
   </main>

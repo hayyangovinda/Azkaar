@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { HammerModule } from '@angular/platform-browser';
 
 interface Dhikr {
   arabic: string;
@@ -11,7 +12,7 @@ interface Dhikr {
 
 @Component({
   selector: 'app-morning',
-  imports: [CommonModule],
+  imports: [CommonModule, HammerModule],
   templateUrl: './morning.html',
   styleUrl: './morning.css',
 })
@@ -27,9 +28,62 @@ export class Morning {
         'Sunan an-Nasa\'i'
       ],
       repetitions: 1
+    },
+    {
+      arabic: `قُلْ هُوَ اللَّهُ أَحَدٌ ، اللَّهُ الصَّمَدُ ، لَمْ يَلِدْ وَلَمْ يُولَدْ ، وَلَمْ يَكُن لَّهُ كُفُوًا أَحَدٌ`,
+      translation: `Say, He is Allah, the One, the Self-Sufficient Master, Who has not given birth and was not born, and to Whom no one is equal. (112)`,
+      sources: [
+        'Sahih al-Bukhari',
+        'Sahih Muslim',
+        'Sunan Abu Dawud',
+        'Sunan at-Tirmidhi'
+      ],
+      repetitions: 3
+    },
+    {
+      arabic: `قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ ، مِن شَرِّ مَا خَلَقَ ، وَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ ، وَمِن شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ ، وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ`,
+      translation: `Say, I seek protection of the Lord of the daybreak, from the evil of what He has created, and from the evil of the darkening night when it settles, and from the evil of the blowers in knots, and from the evil of the envier when he envies. (113)`,
+      sources: [
+        'Sahih al-Bukhari',
+        'Sahih Muslim',
+        'Sunan Abu Dawud',
+        'Sunan at-Tirmidhi'
+      ],
+      repetitions: 3
+    },
+    {
+      arabic: `قُلْ أَعُوذُ بِرَبِّ النَّاسِ ، مَلِكِ النَّاسِ ، إِلَٰهِ النَّاسِ ، مِن شَرِّ الْوَسْوَاسِ الْخَنَّاسِ ، الَّذِي يُوَسْوِسُ فِي صُدُورِ النَّاسِ ، مِنَ الْجِنَّةِ وَالنَّاسِ`,
+      translation: `Say, I seek protection of the Lord of mankind, the King of mankind, the God of mankind, from the evil of the whisperer who withdraws, who whispers in the hearts of mankind, from among the jinn and mankind. (114)`,
+      sources: [
+        'Sahih al-Bukhari',
+        'Sahih Muslim',
+        'Sunan Abu Dawud',
+        'Sunan at-Tirmidhi'
+      ],
+      repetitions: 3
+    },
+    {
+      arabic: `اللَّهُمَّ إِنِّي أَسْأَلُكَ عِلْمًا نَافِعًا ، وَرِزْقًا طَيِّبًا ، وَعَمَلًا مُتَقَبَّلًا`,
+      translation: `O Allah, I ask You for beneficial knowledge, goodly provision, and acceptable deeds.`,
+      sources: [
+        'Sunan Ibn Majah',
+        'Musnad Ahmad',
+        'Authenticated by Al-Albani'
+      ],
+      repetitions: 1
+    },
+    {
+      arabic: `اللَّهُمَّ أَنْتَ رَبِّي لَا إِلَٰهَ إِلَّا أَنْتَ ، خَلَقْتَنِي وَأَنَا عَبْدُكَ ، وَأَنَا عَلَىٰ عَهْدِكَ وَوَعْدِكَ مَا اسْتَطَعْتُ ، أَعُوذُ بِكَ مِنْ شَرِّ مَا صَنَعْتُ ، أَبُوءُ لَكَ بِنِعْمَتِكَ عَلَيَّ ، وَأَبُوءُ بِذَنْبِي فَاغْفِرْ لِي ، فَإِنَّهُ لَا يَغْفِرُ الذُّنُوبَ إِلَّا أَنْتَ`,
+      translation: `O Allah, You are my Lord. There is no god except You. You have created me, and I am Your slave, and I am under Your covenant and pledge (to fulfil it) to the best of my ability. I seek Your protection from the evil that I have done. I acknowledge the favours that You have bestowed upon me, and I admit my sins. Forgive me, for none forgives sins but You.`,
+      sources: [
+        'Sahih al-Bukhari',
+        'Known as Sayyid al-Istighfar (The Master of Seeking Forgiveness)'
+      ],
+      repetitions: 1
     }
   ];
 
+  currentIndex = 0;
   translationExpanded: { [key: number]: boolean } = {};
   sourcesExpanded: { [key: number]: boolean } = {};
 
@@ -45,5 +99,17 @@ export class Morning {
 
   toggleSources(index: number): void {
     this.sourcesExpanded[index] = !this.sourcesExpanded[index];
+  }
+
+  onSwipeLeft(): void {
+    if (this.currentIndex < this.adhkar.length - 1) {
+      this.currentIndex++;
+    }
+  }
+
+  onSwipeRight(): void {
+    if (this.currentIndex > 0) {
+      this.currentIndex--;
+    }
   }
 }
