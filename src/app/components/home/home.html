@@ -1,0 +1,39 @@
+<div class="container">
+  <header class="header">
+    <h1 class="app-title">Azkaar</h1>
+  </header>
+
+  <main class="main-content">
+    <div class="time-cards">
+      <div class="time-card morning" (click)="navigateTo('morning')">
+        <div class="card-overlay"></div>
+        <div class="card-content">
+          <div class="icon-wrapper">
+            <img src="morning-bg3.jpg" alt="Morning" class="time-icon" />
+          </div>
+          <h2 class="card-title">Morning</h2>
+        </div>
+      </div>
+
+      <div class="time-card evening" (click)="navigateTo('evening')">
+        <div class="card-overlay"></div>
+        <div class="card-content">
+          <div class="icon-wrapper">
+            <img src="evening-icon.jpg" alt="Evening" class="time-icon" />
+          </div>
+          <h2 class="card-title">Evening</h2>
+        </div>
+      </div>
+
+      <div class="time-card night" (click)="navigateTo('night')">
+        <div class="card-overlay"></div>
+        <div class="card-content">
+          <div class="icon-wrapper">
+            <img src="night-icon.jpg" alt="Night" class="time-icon" />
+          </div>
+          <h2 class="card-title">Night</h2>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
