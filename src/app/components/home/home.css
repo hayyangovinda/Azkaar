@@ -158,3 +158,22 @@
     height: 90px;
   }
 }
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.privacy-link {
+  color: #666;
+  font-size: 0.7rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.privacy-link:hover {
+  color: #2c3e50;
+  text-decoration: underline;
+}
