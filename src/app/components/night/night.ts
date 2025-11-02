@@ -250,4 +250,14 @@ export class Night {
       }
     }
   }
+
+  getCompletedCount(index: number): number {
+    return this.adhkar[index].repetitions - this.remainingCounts[index];
+  }
+
+  getProgressPercentage(index: number): number {
+    const total = this.adhkar[index].repetitions;
+    const completed = this.getCompletedCount(index);
+    return (completed / total) * 100;
+  }
 }

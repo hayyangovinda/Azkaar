@@ -27,10 +27,20 @@
           <div class="repetition-indicator">
             @if (!showCheckmark[i]) {
             <div class="repetition-circle" (click)="onRepetitionClick(i)">
-              @if (remainingCounts[i] === dhikr.repetitions) {
-              {{ dhikr.repetitions }}×
+              @if (getCompletedCount(i) === 0) {
+              <div class="initial-count">{{ dhikr.repetitions }}×</div>
               } @else {
-              {{ remainingCounts[i] }} remaining
+              <div class="circle-content">
+                <div class="progress-text">{{ getCompletedCount(i) }}/{{ dhikr.repetitions }}</div>
+                @if (dhikr.repetitions > 1) {
+                <svg class="progress-ring" width="70" height="70">
+                  <circle class="progress-ring-bg" cx="35" cy="35" r="30" />
+                  <circle class="progress-ring-fill" cx="35" cy="35" r="30"
+                    [style.stroke-dasharray]="188.4"
+                    [style.stroke-dashoffset]="188.4 - (188.4 * getProgressPercentage(i) / 100)" />
+                </svg>
+                }
+              </div>
               }
             </div>
             } @else {
