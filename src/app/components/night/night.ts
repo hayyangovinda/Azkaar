@@ -8,6 +8,7 @@ interface Dhikr {
   translation: string;
   sources: string[];
   repetitions: number;
+  isInfoCard?: boolean;
 }
 
 @Component({
@@ -125,6 +126,20 @@ export class Night {
       translation: `O Allah, I submit my soul unto You, and I entrust my affair unto You, and I turn my face towards You, and I totally rely on You, in hope and fear of You. Verily there is no refuge or safe haven from You except with You. I believe in Your Book which You have revealed and in Your Prophet whom You have sent.`,
       sources: ['Bukhārī 6313', 'Bukhārī 247'],
       repetitions: 1,
+    },
+    {
+      arabic: `
+1. Surah Al-Mulk (67)
+
+2. Surah As-Sajdah (32)
+
+3. Surah Al-Isra (17)
+
+4. Surah Az-Zumar (39)`,
+      translation: `Recommended Surahs to recite before sleep`,
+      sources: [],
+      repetitions: 0,
+      isInfoCard: true,
     },
   ];
 

@@ -262,6 +262,9 @@
   padding-top: 15px;
   border-top: 2px solid rgba(102, 126, 234, 0.2);
 }
+.bismillah-separator-info-card {
+  border-top: 2px solid rgba(102, 126, 234, 0.2);
+}
 
 .arabic-text {
   font-family: 'Amiri', 'Traditional Arabic', 'Arial', serif;
@@ -272,6 +275,24 @@
   direction: rtl;
   margin: 20px 0;
   font-weight: 500;
+}
+
+.info-text {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-size: 1.3rem;
+  line-height: 2.5;
+  color: #1a1a1a;
+  text-align: left;
+  direction: ltr;
+  margin: 20px 0;
+  font-weight: 500;
+  white-space: pre-line;
+}
+
+.info-text-card {
+  margin: 0 !important;
+  font-size: 1.2rem !important;
+  line-height: 1.5 !important;
 }
 
 .card-toggle {
