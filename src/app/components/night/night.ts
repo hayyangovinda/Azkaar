@@ -76,8 +76,8 @@ export class Night {
       repetitions: 3,
     },
     {
-      arabic: `سُبْحَانَ اللهِ ، اَلْحَمْدُ للهِ ، اَللهُ أَكْبَرُ`,
-      translation: `Allah is free from imperfection. All praise be to Allah. Allah is the Greatest.`,
+      arabic: `سُبْحَانَ اللهِ (×33) ، اَلْحَمْدُ للهِ (×33) ، اَللهُ أَكْبَرُ (×34)`,
+      translation: `Allah is free from imperfection (×33). All praise be to Allah (×33). Allah is the Greatest (×34).`,
       sources: [
         'Fātimah (raḍiy Allāhu \'anhā) came to the Messenger of Allah ﷺ and asked him for a servant. He ﷺ said: "Shall I not tell you of something that is better for you than that? When you go to sleep, say: \'Subhānallah 33 times, Alhamdulillah 33 times, and Allahu Akbar 34 times.\'"',
         'Bukhārī 3705'
