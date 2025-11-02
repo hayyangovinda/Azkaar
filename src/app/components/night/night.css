@@ -1,6 +1,7 @@
 .page-container {
   min-height: 100vh;
   padding: 20px;
+  padding-top: calc(20px + env(safe-area-inset-top));
   background-image: url('/night-icon.jpg');
   background-position: center;
   background-size: cover;
