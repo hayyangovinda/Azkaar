@@ -65,6 +65,7 @@
 
 .time-card.night {
   background: url('/night-bg.jpg') center/cover;
+  background-position: center top;
 }
 
 .card-overlay {
