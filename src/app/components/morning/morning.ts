@@ -69,12 +69,12 @@ export class Morning {
       sources: ['Sunan Abu Dawud', 'Sunan at-Tirmidhi', 'Authenticated by Al-Albani'],
       repetitions: 1,
     },
-    {
-      arabic: `اللَّهُمَّ مَا أَصْبَحَ بِي مِنْ نِعْمَةٍ أَوْ بِأَحَدٍ مِنْ خَلْقِكَ ، فَمِنْكَ وَحْدَكَ لَا شَرِيكَ لَكَ ، فَلَكَ الْحَمْدُ وَلَكَ الشُّكْرُ`,
-      translation: `O Allah, whatever blessing has been received by me or anyone of Your creation in this morning, is from You Alone, You have no partner. To You Alone belongs all praise and all thanks.`,
-      sources: ['Sunan Abu Dawud', "Sunan an-Nasa'i", 'Authenticated by Al-Albani'],
-      repetitions: 1,
-    },
+    // {
+    //   arabic: `اللَّهُمَّ مَا أَصْبَحَ بِي مِنْ نِعْمَةٍ أَوْ بِأَحَدٍ مِنْ خَلْقِكَ ، فَمِنْكَ وَحْدَكَ لَا شَرِيكَ لَكَ ، فَلَكَ الْحَمْدُ وَلَكَ الشُّكْرُ`,
+    //   translation: `O Allah, whatever blessing has been received by me or anyone of Your creation in this morning, is from You Alone, You have no partner. To You Alone belongs all praise and all thanks.`,
+    //   sources: ['Sunan Abu Dawud', "Sunan an-Nasa'i", 'Authenticated by Al-Albani'],
+    //   repetitions: 1,
+    // },
     {
       arabic: `أَصْبَحْنَا عَلَىٰ فِطْرَةِ الْإِسْلَامِ ، وَعَلَىٰ كَلِمَةِ الْإِخْلَاصِ ، وَعَلَىٰ دِينِ نَبِيِّنَا مُحَمَّدٍ ، وَعَلَىٰ مِلَّةِ أَبِينَا إِبْرَاهِيمَ حَنِيفًا مُسْلِمًا وَمَا كَانَ مِنَ الْمُشْرِكِينَ`,
       translation: `We have entered a new day upon the natural religion of Islam, the word of sincere devotion, the religion of our Prophet Muhammad, and the faith of our father Ibrahim, who was upright and devoted to Allah, and was not of those who associate others with Allah.`,
@@ -93,12 +93,12 @@ export class Morning {
       sources: ['Sahih Muslim', 'Sunan Abu Dawud'],
       repetitions: 1,
     },
-    {
-      arabic: `أَصْبَحْنَا وَأَصْبَحَ الْمُلْكُ لِلَّهِ رَبِّ الْعَالَمِينَ ، اللَّهُمَّ إِنِّي أَسْأَلُكَ خَيْرَ هَٰذَا الْيَوْمِ ، فَتْحَهُ وَنَصْرَهُ وَنُورَهُ وَبَرَكَتَهُ وَهُدَاهُ ، وَأَعُوذُ بِكَ مِنْ شَرِّ مَا فِيهِ وَشَرِّ مَا بَعْدَهُ`,
-      translation: `We have entered a new morning and with it all sovereignty belongs to Allah, Lord of all the worlds. O Allah, I ask You for the goodness of this day: its success, victory, light, blessings and guidance. I seek refuge in You from the evil in it and the evil that follows it.`,
-      sources: ['Sunan Abu Dawud', 'Authenticated by Al-Albani'],
-      repetitions: 1,
-    },
+    // {
+    //   arabic: `أَصْبَحْنَا وَأَصْبَحَ الْمُلْكُ لِلَّهِ رَبِّ الْعَالَمِينَ ، اللَّهُمَّ إِنِّي أَسْأَلُكَ خَيْرَ هَٰذَا الْيَوْمِ ، فَتْحَهُ وَنَصْرَهُ وَنُورَهُ وَبَرَكَتَهُ وَهُدَاهُ ، وَأَعُوذُ بِكَ مِنْ شَرِّ مَا فِيهِ وَشَرِّ مَا بَعْدَهُ`,
+    //   translation: `We have entered a new morning and with it all sovereignty belongs to Allah, Lord of all the worlds. O Allah, I ask You for the goodness of this day: its success, victory, light, blessings and guidance. I seek refuge in You from the evil in it and the evil that follows it.`,
+    //   sources: ['Sunan Abu Dawud', 'Authenticated by Al-Albani'],
+    //   repetitions: 1,
+    // },
     {
       arabic: `اللَّهُمَّ إِنِّي أَصْبَحْتُ أُشْهِدُكَ ، وَأُشْهِدُ حَمَلَةَ عَرْشِكَ ، وَمَلَائِكَتَكَ ، وَجَمِيعَ خَلْقِكَ ، أَنَّكَ أَنْتَ اللَّهُ لَا إِلَٰهَ إِلَّا أَنْتَ وَحْدَكَ لَا شَرِيكَ لَكَ ، وَأَنَّ مُحَمَّدًا عَبْدُكَ وَرَسُولُكَ`,
       translation: `O Allah, I have entered this morning calling upon You as witness, and calling the bearers of Your Throne, Your angels, and all Your creation to witness, that You are Allah, there is no god except You Alone, You have no partner, and that Muhammad is Your slave and Messenger.`,
@@ -159,7 +159,7 @@ export class Morning {
         'Authenticated by Shaykh Nasir in As-Sahihah (334)',
         'Whoever says this, Paradise becomes obligatory for him',
       ],
-      repetitions: 3,
+      repetitions: 1,
     },
     {
       arabic: `سُبْحَانَ اللَّهِ وَبِحَمْدِهِ`,
@@ -220,18 +220,18 @@ export class Morning {
       ],
       repetitions: 100,
     },
-    {
-      arabic: `اللَّهُمَّ صَلِّ عَلَىٰ مُحَمَّدٍ ، وَعَلَىٰ آلِ مُحَمَّدٍ ، كَمَا صَلَّيْتَ عَلَىٰ إِبْرَاهِيمَ ، وَعَلَىٰ آلِ إِبْرَاهِيمَ ، إِنَّكَ حَمِيدٌ مَجِيدٌ . اللَّهُمَّ بَارِكْ عَلَىٰ مُحَمَّدٍ ، وَعَلَىٰ آلِ مُحَمَّدٍ ، كَمَا بَارَكْتَ عَلَىٰ إِبْرَاهِيمَ ، وَعَلَىٰ آلِ إِبْرَاهِيمَ ، إِنَّكَ حَمِيدٌ مَجِيدٌ`,
-      translation: `O Allah, bestow Your blessings upon Muhammad and upon the family of Muhammad, as You bestowed blessings upon Ibrahim and upon the family of Ibrahim. Indeed, You are Praiseworthy, Glorious. O Allah, bless Muhammad and the family of Muhammad, as You blessed Ibrahim and the family of Ibrahim. Indeed, You are Praiseworthy, Glorious.`,
-      sources: [
-        'Sahih al-Bukhari (3190)',
-        'Sahih Muslim (406)',
-        'At-Tabarani with good chain',
-        "Authenticated by Shaykh Nasir in Sahih al-Jami' as-Saghir (6233)",
-        'Whoever sends blessings upon me 10 times in the morning and 10 times in the evening will attain my intercession on the Day of Resurrection',
-      ],
-      repetitions: 10,
-    },
+    // {
+    //   arabic: `اللَّهُمَّ صَلِّ عَلَىٰ مُحَمَّدٍ ، وَعَلَىٰ آلِ مُحَمَّدٍ ، كَمَا صَلَّيْتَ عَلَىٰ إِبْرَاهِيمَ ، وَعَلَىٰ آلِ إِبْرَاهِيمَ ، إِنَّكَ حَمِيدٌ مَجِيدٌ . اللَّهُمَّ بَارِكْ عَلَىٰ مُحَمَّدٍ ، وَعَلَىٰ آلِ مُحَمَّدٍ ، كَمَا بَارَكْتَ عَلَىٰ إِبْرَاهِيمَ ، وَعَلَىٰ آلِ إِبْرَاهِيمَ ، إِنَّكَ حَمِيدٌ مَجِيدٌ`,
+    //   translation: `O Allah, bestow Your blessings upon Muhammad and upon the family of Muhammad, as You bestowed blessings upon Ibrahim and upon the family of Ibrahim. Indeed, You are Praiseworthy, Glorious. O Allah, bless Muhammad and the family of Muhammad, as You blessed Ibrahim and the family of Ibrahim. Indeed, You are Praiseworthy, Glorious.`,
+    //   sources: [
+    //     'Sahih al-Bukhari (3190)',
+    //     'Sahih Muslim (406)',
+    //     'At-Tabarani with good chain',
+    //     "Authenticated by Shaykh Nasir in Sahih al-Jami' as-Saghir (6233)",
+    //     'Whoever sends blessings upon me 10 times in the morning and 10 times in the evening will attain my intercession on the Day of Resurrection',
+    //   ],
+    //   repetitions: 10,
+    // },
   ];
 
   currentIndex = 0;

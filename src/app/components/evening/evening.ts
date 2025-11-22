@@ -70,18 +70,18 @@ export class Evening {
       sources: ["Nasā'ī 10405"],
       repetitions: 1,
     },
-    {
-      arabic: `اللَّهُمَّ مَا أَمْسَى بِي مِنْ نِعْمَةٍ أَوْ بِأَحَدٍ مِنْ خَلْقِكَ ، فَمِنْكَ وَحْدَكَ لَا شَرِيكَ لَكَ ، فَلَكَ الْحَمْدُ وَلَكَ الشُّكْرُ`,
-      translation: `O Allah, all the favours that I or anyone from Your creation has received in the evening, are from You Alone. You have no partner. To You Alone belong all praise and all thanks.`,
-      sources: ['Abū Dāwūd 5073'],
-      repetitions: 1,
-    },
-    {
-      arabic: `أَمْسَيْنَا عَلَىٰ فِطْرَةِ الْإِسْلَامِ ، وَعَلَىٰ كَلِمَةِ الْإِخْلَاصِ ، وَعَلَىٰ دِينِ نَبِيِّنَا مُحَمَّدٍ ، وَعَلَىٰ مِلَّةِ أَبِينَا إِبْرَاهِيمَ حَنِيفًا مُسْلِمًا وَمَا كَانَ مِنَ الْمُشْرِكِينَ`,
-      translation: `We have entered the evening upon the natural religion of Islam, the word of pure faith (i.e. Shahādah), the religion of our Prophet Muhammad ﷺ and upon the way of our father Ibrāhīm, who turned away from all that is false, having surrendered to Allah, and he was not of the polytheists.`,
-      sources: ['Ahmad 15360'],
-      repetitions: 1,
-    },
+    // {
+    //   arabic: `اللَّهُمَّ مَا أَمْسَى بِي مِنْ نِعْمَةٍ أَوْ بِأَحَدٍ مِنْ خَلْقِكَ ، فَمِنْكَ وَحْدَكَ لَا شَرِيكَ لَكَ ، فَلَكَ الْحَمْدُ وَلَكَ الشُّكْرُ`,
+    //   translation: `O Allah, all the favours that I or anyone from Your creation has received in the evening, are from You Alone. You have no partner. To You Alone belong all praise and all thanks.`,
+    //   sources: ['Abū Dāwūd 5073'],
+    //   repetitions: 1,
+    // },
+    // {
+    //   arabic: `أَمْسَيْنَا عَلَىٰ فِطْرَةِ الْإِسْلَامِ ، وَعَلَىٰ كَلِمَةِ الْإِخْلَاصِ ، وَعَلَىٰ دِينِ نَبِيِّنَا مُحَمَّدٍ ، وَعَلَىٰ مِلَّةِ أَبِينَا إِبْرَاهِيمَ حَنِيفًا مُسْلِمًا وَمَا كَانَ مِنَ الْمُشْرِكِينَ`,
+    //   translation: `We have entered the evening upon the natural religion of Islam, the word of pure faith (i.e. Shahādah), the religion of our Prophet Muhammad ﷺ and upon the way of our father Ibrāhīm, who turned away from all that is false, having surrendered to Allah, and he was not of the polytheists.`,
+    //   sources: ['Ahmad 15360'],
+    //   repetitions: 1,
+    // },
 
     {
       arabic: `أَمْسَيْنَا وَأَمْسَى الْمُلْكُ لِلهِ وَالْحَمْدُ لِلهِ ، لَا إِلٰهَ إِلَّا اللهُ وَحْدَهُ لَا شَرِيكَ لَهُ ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ ، وَهُوَ عَلَىٰ كُلِّ شَيْءٍ قَدِيرٌ ، رَبِّ أَسْأَلُكَ خَيْرَ مَا فِي هٰذِهِ اللَّيْلَةِ وَخَيْرَ مَا بَعْدَهَا ، وَأَعُوذُ بِكَ مِنْ شَرِّ مَا فِي هٰذِهِ اللَّيْلَةِ وَشَرِّ مَا بَعْدَهَا ، رَبِّ أَعُوذُ بِكَ مِنَ الْكَسَلِ وَسُوءِ الْكِبَرِ ، رَبِّ أَعُوذُ بِكَ مِنْ عَذَابٍ فِي النَّارِ وَعَذَابٍ فِي الْقَبْرِ`,
@@ -119,16 +119,22 @@ export class Evening {
       sources: ['Ibn al-Sunnī 71'],
       repetitions: 7,
     },
-    {
-      arabic: `رَضِيتُ بِاللَّهِ رَبًّا ، وَبِالْإِسْلَامِ دِينًا ، وَبِمُحَمَّدٍ ﷺ نَبِيًّا`,
-      translation: `I am pleased with Allah as my Lord, with Islam as my religion and with Muhammad ﷺ as my Prophet.`,
-      sources: ['Ahmad 18927', "Tabarānī in Mu'jam al-Kabīr 838"],
-      repetitions: 3,
-    },
+    // {
+    //   arabic: `رَضِيتُ بِاللَّهِ رَبًّا ، وَبِالْإِسْلَامِ دِينًا ، وَبِمُحَمَّدٍ ﷺ نَبِيًّا`,
+    //   translation: `I am pleased with Allah as my Lord, with Islam as my religion and with Muhammad ﷺ as my Prophet.`,
+    //   sources: ['Ahmad 18927', "Tabarānī in Mu'jam al-Kabīr 838"],
+    //   repetitions: 3,
+    // },
     {
       arabic: `بِسْمِ اللَّهِ الَّذِي لَا يَضُرُّ مَعَ اسْمِهِ شَيْءٌ فِي الْأَرْضِ وَلَا فِي السَّمَاءِ ، وَهُوَ السَّمِيعُ الْعَلِيمُ`,
       translation: `In the Name of Allah, with whose Name nothing can harm in the earth nor in the sky. He is the All-Hearing and All-Knowing.`,
       sources: ['Tirmidhī 3388'],
+      repetitions: 3,
+    },
+    {
+      arabic: `أَعُوذُ بِكَلِمَاتِ اللهِ التَّامَّاتِ مِنْ شَرِّ مَا خَلَقَ`,
+      translation: `I seek protection in Allah's perfect words from the evil of whatever He has created.`,
+      sources: ['Tirmidhī 3604'],
       repetitions: 3,
     },
     {
@@ -161,18 +167,12 @@ export class Evening {
       sources: ["Nasā'ī in Sunan al-Kubrā 10657"],
       repetitions: 100,
     },
-    {
-      arabic: `اللَّهُمَّ صَلِّ عَلَىٰ مُحَمَّدٍ ، وَعَلَىٰ آلِ مُحَمَّدٍ ، كَمَا صَلَّيْتَ عَلَىٰ إِبْرَاهِيمَ ، وَعَلَىٰ آلِ إِبْرَاهِيمَ ، إِنَّكَ حَمِيدٌ مَجِيدٌ . اللَّهُمَّ بَارِكْ عَلَىٰ مُحَمَّدٍ ، وَعَلَىٰ آلِ مُحَمَّدٍ ، كَمَا بَارَكْتَ عَلَىٰ إِبْرَاهِيمَ ، وَعَلَىٰ آلِ إِبْرَاهِيمَ ، إِنَّكَ حَمِيدٌ مَجِيدٌ`,
-      translation: `O Allah, bestow Your blessings upon Muhammad and upon the family of Muhammad, as You bestowed blessings upon Ibrahim and upon the family of Ibrahim. Indeed, You are Praiseworthy, Glorious. O Allah, bless Muhammad and the family of Muhammad, as you have blessed Ibrahim and the family of Ibrahim. Indeed, You are Praiseworthy, Glorious.`,
-      sources: ["Tabarānī in Mu'jam al-Kabīr 6357"],
-      repetitions: 10,
-    },
-    {
-      arabic: `أَعُوذُ بِكَلِمَاتِ اللهِ التَّامَّاتِ مِنْ شَرِّ مَا خَلَقَ`,
-      translation: `I seek protection in Allah's perfect words from the evil of whatever He has created.`,
-      sources: ['Tirmidhī 3604'],
-      repetitions: 3,
-    },
+    // {
+    //   arabic: `اللَّهُمَّ صَلِّ عَلَىٰ مُحَمَّدٍ ، وَعَلَىٰ آلِ مُحَمَّدٍ ، كَمَا صَلَّيْتَ عَلَىٰ إِبْرَاهِيمَ ، وَعَلَىٰ آلِ إِبْرَاهِيمَ ، إِنَّكَ حَمِيدٌ مَجِيدٌ . اللَّهُمَّ بَارِكْ عَلَىٰ مُحَمَّدٍ ، وَعَلَىٰ آلِ مُحَمَّدٍ ، كَمَا بَارَكْتَ عَلَىٰ إِبْرَاهِيمَ ، وَعَلَىٰ آلِ إِبْرَاهِيمَ ، إِنَّكَ حَمِيدٌ مَجِيدٌ`,
+    //   translation: `O Allah, bestow Your blessings upon Muhammad and upon the family of Muhammad, as You bestowed blessings upon Ibrahim and upon the family of Ibrahim. Indeed, You are Praiseworthy, Glorious. O Allah, bless Muhammad and the family of Muhammad, as you have blessed Ibrahim and the family of Ibrahim. Indeed, You are Praiseworthy, Glorious.`,
+    //   sources: ["Tabarānī in Mu'jam al-Kabīr 6357"],
+    //   repetitions: 10,
+    // },
   ];
 
   currentIndex = 0;
