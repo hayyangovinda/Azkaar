@@ -89,12 +89,12 @@ export class Evening {
       sources: ['Muslim 2723'],
       repetitions: 1,
     },
-    {
-      arabic: `أَمْسَيْنَا وَأَمْسَى الْمُلْكُ للهِ رَبِّ الْعَالَمِينَ ، اللَّهُمَّ إِنِّي أَسْأَلُكَ خَيْرَ هـٰذِهِ اللَّيْلَةِ ، فَتْحَهَا وَنَصْرَهَا وَنُورَهـَا وَبَرَكَتَهَا وَهُدَاهـَا وَأَعُوذُ بِكَ مِنْ شَرِّ مَا فِيهَا وَشَرِّ مَا بَعْدَهَا`,
-      translation: `We have entered the evening and at this very time the whole kingdom belongs to Allah, Lord of the Worlds. O Allah, I ask You for the goodness of this night: its victory, its help, its light, and its blessings and guidance. I seek Your protection from the evil that is in it and from the evil that follows it.`,
-      sources: ['Abū Dāwūd 5084'],
-      repetitions: 1,
-    },
+    // {
+    //   arabic: `أَمْسَيْنَا وَأَمْسَى الْمُلْكُ للهِ رَبِّ الْعَالَمِينَ ، اللَّهُمَّ إِنِّي أَسْأَلُكَ خَيْرَ هـٰذِهِ اللَّيْلَةِ ، فَتْحَهَا وَنَصْرَهَا وَنُورَهـَا وَبَرَكَتَهَا وَهُدَاهـَا وَأَعُوذُ بِكَ مِنْ شَرِّ مَا فِيهَا وَشَرِّ مَا بَعْدَهَا`,
+    //   translation: `We have entered the evening and at this very time the whole kingdom belongs to Allah, Lord of the Worlds. O Allah, I ask You for the goodness of this night: its victory, its help, its light, and its blessings and guidance. I seek Your protection from the evil that is in it and from the evil that follows it.`,
+    //   sources: ['Abū Dāwūd 5084'],
+    //   repetitions: 1,
+    // },
     {
       arabic: `اللَّهُمَّ إِنِّي أَمْسَيْتُ أُشْهِدُكَ ، وَأُشْهِدُ حَمَلَةَ عَرْشِكَ ، وَمَلَائِكَتَكَ ، وَجَمِيعَ خَلْقِكَ ، أَنَّكَ أَنْتَ اللهُ لَا إِلَٰهَ إِلَّا أَنْتَ وَحْدَكَ ، لَا شَرِيكَ لَكَ ، وَأَنَّ مُحَمَّدًا عَبْدُكَ وَرَسُولُك`,
       translation: `O Allah, I have entered the evening and call upon You, the bearers of Your Throne, Your angels and all creation, to bear witness that surely You are Allah. There is no god but You Alone. You have no partners, and that Muhammad ﷺ is Your slave and Your Messenger.`,

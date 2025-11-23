@@ -6,6 +6,10 @@
 }
 
 .header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #ffffff;
   text-align: center;
   padding: 30px 20px;
   color: #2c3e50;
