@@ -98,4 +98,20 @@
       }
     </div>
   </main>
+
+  <!-- Review Prompt Modal -->
+  @if (showReviewPrompt) {
+  <div class="modal-overlay" (click)="declineReview()">
+    <div class="modal-content" (click)="$event.stopPropagation()">
+      <h2 class="modal-title">Enjoying Azkaar?</h2>
+      <p class="modal-message">
+        Would you like to rate us on the Play Store? Your feedback helps us improve and reach more people!
+      </p>
+      <div class="modal-actions">
+        <button class="modal-button secondary" (click)="declineReview()">Not Now</button>
+        <button class="modal-button primary" (click)="acceptReview()">Rate App</button>
+      </div>
+    </div>
+  </div>
+  }
 </div>

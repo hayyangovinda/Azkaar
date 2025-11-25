@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { HammerModule } from '@angular/platform-browser';
+import { ReviewService } from '../../services/review.service';
 
 interface Dhikr {
   arabic: string;
@@ -239,8 +240,12 @@ export class Morning {
   sourcesExpanded: { [key: number]: boolean } = {};
   remainingCounts: { [key: number]: number } = {};
   showCheckmark: { [key: number]: boolean } = {};
+  showReviewPrompt = false;
 
-  constructor(private router: Router) {
+  constructor(
+    private router: Router,
+    private reviewService: ReviewService
+  ) {
     // Initialize remaining counts for each dhikr
     this.adhkar.forEach((dhikr, index) => {
       this.remainingCounts[index] = dhikr.repetitions;
@@ -271,13 +276,18 @@ export class Morning {
     }
   }
 
-  onRepetitionClick(index: number): void {
+  async onRepetitionClick(index: number): Promise<void> {
     if (this.remainingCounts[index] > 0) {
       this.remainingCounts[index]--;
 
       // When count reaches 0, show checkmark animation
       if (this.remainingCounts[index] === 0) {
         this.showCheckmark[index] = true;
+
+        // Check if this is the 5th dhikr (index 4) completion
+        if (index === 4) {
+          await this.checkAndShowReviewPrompt();
+        }
 
         // After animation, move to next dhikr (if available)
         setTimeout(() => {
@@ -287,6 +297,32 @@ export class Morning {
         }, 630); // Wait for animation to complete
       }
     }
+  }
+
+  async checkAndShowReviewPrompt(): Promise<void> {
+    const hasBeenPrompted = await this.reviewService.hasBeenPrompted();
+    if (!hasBeenPrompted) {
+      // Wait a bit for checkmark animation before showing prompt
+      setTimeout(() => {
+        this.showReviewPrompt = true;
+      }, 800);
+    }
+  }
+
+  async acceptReview(): Promise<void> {
+    this.showReviewPrompt = false;
+    await this.reviewService.openStoreForReview();
+  }
+
+  declineReview(): void {
+    this.showReviewPrompt = false;
+    // Mark as prompted so we don't ask again
+    this.reviewService.hasBeenPrompted().then((prompted) => {
+      if (!prompted) {
+        // We still mark it as prompted even if they decline
+        this.reviewService['markAsPrompted']();
+      }
+    });
   }
 
   getCompletedCount(index: number): number {
