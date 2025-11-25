@@ -5,6 +5,7 @@ import { Evening } from './components/evening/evening';
 import { Night } from './components/night/night';
 import { AfterSwalaat } from './components/after-swalaat/after-swalaat';
 import { Privacy } from './components/privacy/privacy';
+import { Support } from './components/support/support';
 
 export const routes: Routes = [
   { path: '', component: Home },
@@ -13,5 +14,6 @@ export const routes: Routes = [
   { path: 'night', component: Night },
   { path: 'after-swalaat', component: AfterSwalaat },
   { path: 'privacy', component: Privacy },
+  { path: 'support', component: Support },
   { path: '**', redirectTo: '' }
 ];

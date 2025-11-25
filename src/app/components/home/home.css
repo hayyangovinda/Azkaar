@@ -170,6 +170,31 @@
   margin-top: 20px;
 }
 
+.footer-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.footer-link {
+  color: #666;
+  font-size: 0.7rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #2c3e50;
+  text-decoration: underline;
+}
+
+.link-divider {
+  color: rgba(102, 102, 102, 0.5);
+  font-size: 0.7rem;
+}
+
 .privacy-link {
   color: #666;
   font-size: 0.7rem;

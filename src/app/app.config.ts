@@ -1,5 +1,6 @@
 import { ApplicationConfig, importProvidersFrom, provideBrowserGlobalErrorListeners, provideZoneChangeDetection } from '@angular/core';
 import { provideRouter } from '@angular/router';
+import { provideHttpClient } from '@angular/common/http';
 import { HammerModule } from '@angular/platform-browser';
 
 import { routes } from './app.routes';
@@ -9,6 +10,7 @@ export const appConfig: ApplicationConfig = {
     provideBrowserGlobalErrorListeners(),
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(routes),
-    importProvidersFrom(HammerModule)
+    importProvidersFrom(HammerModule),
+    provideHttpClient()
   ]
 };
