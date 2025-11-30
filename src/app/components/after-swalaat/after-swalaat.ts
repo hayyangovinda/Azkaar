@@ -5,6 +5,7 @@ import { HammerModule } from '@angular/platform-browser';
 
 interface Dhikr {
   arabic: string;
+  transliteration: string;
   translation: string;
   sources: string[];
   repetitions: number;
@@ -22,6 +23,9 @@ export class AfterSwalaat {
       arabic: `أَسْتَغْفِرُ اللهَ، أَسْتَغْفِرُ اللهَ، أَسْتَغْفِرُ اللهَ
 
 اللَّهُمَّ أَنْتَ السَّلاَمُ وَمِنْكَ السَّلاَمُ تَبَارَكْتَ يَا ذَا الْجَلاَلِ وَالإِكْرَامِ`,
+      transliteration: `Astaghfiru Allāh, astaghfiru Allāh, astaghfiru Allāh
+
+Allāhumma anta as-salām wa minka as-salām tabārakta yā dhā al-jalāli wa al-ikrām.`,
       translation: `I seek the forgiveness of Allah (3 times)
 
 O Allah You are the Flawless One, and from You comes peace and security. Blessed are You, Possessor of Majesty and Honour`,
@@ -30,12 +34,14 @@ O Allah You are the Flawless One, and from You comes peace and security. Blessed
     },
     {
       arabic: `لَا إلَهَ إِلاَّ اللهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ، اللَّهُمَّ لَا مَانِعَ لِمَا أَعْطَيْتَ، وَلَا مُعْطِيَ لِمَا مَنَعْتَ، وَلَا يَنْفَعُ ذَا الْجَدِّ مِنْكَ الْجَدُّ`,
+      transliteration: `Lā ilāha illā Allāhu waḥdahū lā sharīka lah, lahu al-mulku wa lahu al-ḥamd wa huwa 'alā kulli shay'in qadīr, Allāhumma lā māni'a limā a'ṭayt, wa lā mu'ṭiya limā mana'ta, wa lā yanfa'u dhā al-jaddi minka al-jadd.`,
       translation: `None has the right to be worshiped but Allah alone, He has no partner, His is the dominion and His is the praise, and He is Able to do all things. O Allah, there is none who can withhold what You give, and none may give what You have withheld; and the might of the mighty person cannot benefit him against You.`,
       sources: ['Sahih al-Bukhari 844', 'Sahih Muslim 593'],
       repetitions: 1,
     },
     {
       arabic: `لاَ إِلَهَ إِلاَّ اللهُ وَحْدَهُ لاَ شَرِيكَ لَهُ لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَىْءٍ قَدِيرٌ، لاَ حَوْلَ وَلاَ قُوَّةَ إِلاَّ بِاللهِ، لاَ إِلَهَ إِلاَّ اللهُ وَلاَ نَعْبُدُ إِلاَّ إِيَّاهُ لَهُ النِّعْمَةُ وَلَهُ الْفَضْلُ وَلَهُ الثَّنَاءُ الْحَسَنُ، لاَ إِلَهَ إِلاَّ اللهُ مُخْلِصِينَ لَهُ الدِّينَ وَلَوْ كَرِهَ الْكَافِرُونَ`,
+      transliteration: `Lā ilāha illā Allāhu waḥdahū lā sharīka lah, lahu al-mulku wa lahu al-ḥamd wa huwa 'alā kulli shay'in qadīr, lā ḥawla wa lā quwwata illā billāh, lā ilāha illā Allāh wa lā na'budu illā iyyāh, lahu an-ni'matu wa lahu al-faḍlu wa lahu ath-thanā' al-ḥasan, lā ilāha illā Allāhu mukhliṣīna lahu ad-dīn wa law kariha al-kāfirūn.`,
       translation: `None has the right to be worshiped but Allah alone, He has no partner, His is the dominion and His is the praise and He is Able to do all things. There is no power and no might except by Allah. None has the right to be worshiped but Allah, and we do not worship any other besides Him. His is grace, and His is bounty and to Him belongs the most excellent praise. None has the right to be worshiped but Allah. (We are) sincere in making our religious devotion to Him, even though the disbelievers may dislike it.`,
       sources: ['Sahih Muslim 594', 'Abu Dawud 1506', 'an-Nasai 1339 & 1340'],
       repetitions: 1,
@@ -44,6 +50,10 @@ O Allah You are the Flawless One, and from You comes peace and security. Blessed
       arabic: `سُبْحَانَ اللهِ (×33) ، اَلْحَمْدُ لِلهِ (×33) ، اَللهُ أَكْبَرُ (×33)
 :Then to complete 100
 لاَ إِلَهَ إِلاَّ اللهُ وَحْدَهُ لاَ شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَىْءٍ قَدِيرٌ`,
+      transliteration: `Subḥāna Allāh (×33), al-ḥamdu lillāh (×33), Allāhu akbar (×33)
+
+Then to complete 100:
+Lā ilāha illā Allāhu waḥdahū lā sharīka lah, lahu al-mulku wa lahu al-ḥamd wa huwa 'alā kulli shay'in qadīr.`,
       translation: `Glory be to Allah (×33). Praise be to Allah (×33). Allah is the Most Great (×33).
 
 Then to complete 100:
@@ -56,18 +66,21 @@ There is none worthy of worship except Allah, having no partner with Him, to Him
     },
     {
       arabic: `رَبِّ قِنِي عَذَابَكَ يَوْمَ تَبْعَثُ  عِبَادَكَ`,
+      transliteration: `Rabbi qinī 'adhābaka yawma tab'athu 'ibādak.`,
       translation: `O my Lord! Protect me from Your Torment on the Day when You will resurrect Your servants.`,
       sources: ['Muslim 709', 'Sahih Ibn Khuzaymah 1564-1565'],
       repetitions: 1,
     },
     {
       arabic: `اللَّهُمَّ اغْفِرْ لِي مَا قَدَّمْتُ وَمَا أَخَّرْتُ وَمَا أَسْرَرْتُ وَمَا أَعْلَنْتُ وَمَا أَسْرَفْتُ وَمَا أَنْتَ أَعْلَمُ بِهِ مِنِّي أَنْتَ الْمُقَدِّمُ وَأَنْتَ الْمُؤَخِّرُ لاَ إِلَهَ إِلاَّ أَنْتَ`,
+      transliteration: `Allāhumma ighfir lī mā qaddamtu wa mā akhkhartu wa mā asrartu wa mā a'lantu wa mā asraftu wa mā anta a'lamu bihī minnī, anta al-muqaddimu wa anta al-mu'akhkhir, lā ilāha illā ant.`,
       translation: `O Allah! Forgive me that which I have advanced (i.e. sins previously committed), that which I have delayed (i.e. sins which I have not yet committed), that which I have done secretly and that which I have done openly, that which I have done in excess (exceeding all limits), and that which You Know about it better than me. You are al-Muqaddim (the One Who Gives Precedence) and You are al-Mu'akhkhir (the One Who Delays) [based upon Your Perfect Divine Wisdom], There is nothing which deserves to be worshiped besides You.`,
       sources: ['Muslim 771'],
       repetitions: 1,
     },
     {
       arabic: `اللَّهُمَّ إِنِّي أَسْأَلُكَ فِعْلَ الْخَيْرَاتِ وَتَرْكَ الْمُنْكَرَاتِ وَحُبَّ الْمَسَاكِينِ وَإِذَا أَرَدْتَ بِعِبَادِكَ فِتْنَةً فَاقْبِضْنِي إِلَيْكَ غَيْرَ مَفْتُونٍ`,
+      transliteration: `Allāhumma innī as'aluka fi'la al-khayrāti wa tarka al-munkarāti wa ḥubba al-masākīn, wa idhā aradta bi-'ibādika fitnatan fa-qbiḍnī ilayka ghayra maftūn.`,
       translation: `O Allah, I ask You (to enable me) to do good deeds and avoid evil deeds and to love the poor. And If You will that some trial should befall Your slaves, then take me to You [i.e., cause me to die] without having subjected to that trial.`,
       sources: ['at-Tirmidhi 3233', 'Sahih li ghayrihi - al-Albani'],
       repetitions: 1,
@@ -76,6 +89,9 @@ There is none worthy of worship except Allah, having no partner with Him, to Him
       arabic: `اللهُ أَكْبَرُ كَبِيرًا , عَدَدَ الشَّفْعِ وَالْوِتْرِ , وَكَلِمَاتِ اللهِ التَّامَّاتِ, الطَّيِّبَاتِ الْمُبَارَكَاتِ
 
 لا إلَهَ إِلاَّ اللهُ، عَدَدَ الشَّفْعِ وَالْوِتْرِ , وَكَلِمَاتِ اللهِ التَّامَّاتِ, الطَّيِّبَاتِ الْمُبَارَكَاتِ`,
+      transliteration: `Allāhu akbaru kabīran, 'adada ash-shaf'i wa al-witr, wa kalimāti Allāhi at-tāmmāt, aṭ-ṭayyibāti al-mubārakāt
+
+Lā ilāha illā Allāh, 'adada ash-shaf'i wa al-witr, wa kalimāti Allāhi at-tāmmāt, aṭ-ṭayyibāti al-mubārakāt.`,
       translation: `Allah is Most Great the number of the even and the odd, and the blessed, pure, perfect words of Allah
 
 There is no god but Allah the number of the even and the odd, and the blessed, pure, perfect words of Allah`,
@@ -88,12 +104,14 @@ There is no god but Allah the number of the even and the odd, and the blessed, p
     },
     {
       arabic: `اللَّهُمَّ أَعِنِّي عَلَى ذِكْرِكَ وَشُكْرِكَ وَحُسْنِ عِبَادَتِكَ`,
+      transliteration: `Allāhumma a'innī 'alā dhikrika wa shukrika wa ḥusni 'ibādatik.`,
       translation: `O Allah! Help me to remember You, and to be thankful to You, and to worship You in the best manner.`,
       sources: ['Abu Dawud 1522', "an-Nasa'i 1303", 'Ahmad 36/429'],
       repetitions: 1,
     },
     {
       arabic: `اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ ۚ لَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ ۚ لَّهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ ۗ مَن ذَا الَّذِي يَشْفَعُ عِندَهُ إِلَّا بِإِذْنِهِ ۚ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ ۖ وَلَا يُحِيطُونَ بِشَيْءٍ مِّنْ عِلْمِهِ إِلَّا بِمَا شَاءَ ۚ وَسِعَ كُرْسِيُّهُ السَّمَاوَاتِ وَالْأَرْضَ ۖ وَلَا يَئُودُهُ حِفْظُهُمَا ۚ وَهُوَ الْعَلِيُّ الْعَظِيمُ`,
+      transliteration: `Allāhu lā ilāha illā huwa al-ḥayyu al-qayyūm, lā ta'khudhuhū sinatun wa lā nawm, lahū mā fī as-samāwāti wa mā fī al-arḍ, man dhā alladhī yashfa'u 'indahū illā bi-idhnih, ya'lamu mā bayna aydīhim wa mā khalfahum, wa lā yuḥīṭūna bi-shay'in min 'ilmihī illā bi-mā shā', wasi'a kursiyyuhū as-samāwāti wa al-arḍ, wa lā ya'ūduhū ḥifẓuhumā, wa huwa al-'aliyyu al-'aẓīm.`,
       translation: `Allah, there is no god but He, the Ever Living, the One Who sustains and protects all that exists. Neither drowsiness overtakes Him nor sleep. To Him Alone belongs whatever is in the heavens and whatever is on the earth. Who is it that can intercede with Him except with His permission? He knows what is before them and what will be after them, and they encompass not a thing of His knowledge except for what He wills. His Kursi extends over the heavens and the earth, and their preservation tires Him not. And He is the Most High, the Most Great. (Ayat ul-Kursi 2:255)`,
       sources: [
         "an-Nasa'i in al-Kubra 9928",
@@ -104,6 +122,7 @@ There is no god but Allah the number of the even and the odd, and the blessed, p
     },
     {
       arabic: `قُلْ هُوَ اللَّهُ أَحَدٌ ، اللَّهُ الصَّمَدُ ، لَمْ يَلِدْ وَلَمْ يُولَدْ ، وَلَمْ يَكُن لَّهُ كُفُوًا أَحَدٌ`,
+      transliteration: `Qul huwa Allāhu aḥad, Allāhu aṣ-ṣamad, lam yalid wa lam yūlad, wa lam yakun lahū kufuwan aḥad.`,
       translation: `Say, He is Allah, the One, the Self-Sufficient Master, Who has not given birth and was not born, and to Whom no one is equal. (Surah al-Ikhlas 112)`,
       sources: [
         'at-Tirmidhi 2903',
@@ -114,6 +133,7 @@ There is no god but Allah the number of the even and the odd, and the blessed, p
     },
     {
       arabic: `قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ ، مِن شَرِّ مَا خَلَقَ ، وَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ ، وَمِن شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ ، وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ`,
+      transliteration: `Qul a'ūdhu bi-rabbi al-falaq, min sharri mā khalaq, wa min sharri ghāsiqin idhā waqab, wa min sharri an-naffāthāti fī al-'uqad, wa min sharri ḥāsidin idhā ḥasad.`,
       translation: `Say, I seek protection of the Lord of the daybreak, from the evil of what He has created, and from the evil of the darkening night when it settles, and from the evil of the blowers in knots, and from the evil of the envier when he envies. (Surah al-Falaq 113)`,
       sources: [
         'at-Tirmidhi 2903',
@@ -124,6 +144,7 @@ There is no god but Allah the number of the even and the odd, and the blessed, p
     },
     {
       arabic: `قُلْ أَعُوذُ بِرَبِّ النَّاسِ ، مَلِكِ النَّاسِ ، إِلَٰهِ النَّاسِ ، مِن شَرِّ الْوَسْوَاسِ الْخَنَّاسِ ، الَّذِي يُوَسْوِسُ فِي صُدُورِ النَّاسِ ، مِنَ الْجِنَّةِ وَالنَّاسِ`,
+      transliteration: `Qul a'ūdhu bi-rabbi an-nās, maliki an-nās, ilāhi an-nās, min sharri al-waswāsi al-khannās, alladhī yuwaswisu fī ṣudūri an-nās, mina al-jinnati wa an-nās.`,
       translation: `Say, I seek protection of the Lord of mankind, the King of mankind, the God of mankind, from the evil of the whisperer who withdraws, who whispers in the hearts of mankind, whether they be Jinn or people. (Surah an-Naas 114)`,
       sources: [
         'at-Tirmidhi 2903',
@@ -134,6 +155,7 @@ There is no god but Allah the number of the even and the odd, and the blessed, p
     },
     {
       arabic: `سُبْحَانَكَ اللَّهُمَّ وَبِحَمْدِكَ أَسْتَغْفِرُكَ وَأَتُوبُ إِلَيْكَ`,
+      transliteration: `Subḥānaka Allāhumma wa bi-ḥamdika astaghfiruka wa atūbu ilayk.`,
       translation: `Glory and praise be to You, O Allah, I seek Your forgiveness and I repent to You.`,
       sources: [
         "Sunan an-Nasa'i 1344",
@@ -144,8 +166,9 @@ There is no god but Allah the number of the even and the odd, and the blessed, p
       repetitions: 1,
     },
     {
-      arabic: `Say 10 times after Maghrib and Fajr Prayer while sitting in the position of tashahhud 
+      arabic: `Say 10 times after Maghrib and Fajr Prayer while sitting in the position of tashahhud
       لَا إِلَهَ إِلَّا اللهُ وَحَدْهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ يُحْيِي وَيُمِيتُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ`,
+      transliteration: `Lā ilāha illā Allāhu waḥdahū lā sharīka lah, lahu al-mulku wa lahu al-ḥamd, yuḥyī wa yumīt wa huwa 'alā kulli shay'in qadīr.`,
       translation: `None has the right to be worshiped but Allah alone, Who has no partner. His is the dominion and His is the praise. He brings life and He causes death, and He is Able to do all things.`,
       sources: [
         'at-Tirmidhi 3474',
@@ -158,6 +181,7 @@ There is no god but Allah the number of the even and the odd, and the blessed, p
   ];
 
   currentIndex = 0;
+  transliterationExpanded: { [key: number]: boolean } = {};
   translationExpanded: { [key: number]: boolean } = {};
   sourcesExpanded: { [key: number]: boolean } = {};
   remainingCounts: { [key: number]: number } = {};
@@ -172,6 +196,10 @@ There is no god but Allah the number of the even and the odd, and the blessed, p
 
   goBack(): void {
     this.router.navigate(['/']);
+  }
+
+  toggleTransliteration(index: number): void {
+    this.transliterationExpanded[index] = !this.transliterationExpanded[index];
   }
 
   toggleTranslation(index: number): void {

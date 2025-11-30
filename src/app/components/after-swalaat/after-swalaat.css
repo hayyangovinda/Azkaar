@@ -280,6 +280,10 @@
   transition: opacity 0.3s ease;
 }
 
+.transliteration-card .card-title {
+  color: #9a9a9a;
+}
+
 .translation-card .card-title {
   color: #9a9a9a;
 }
@@ -290,6 +294,10 @@
 
 .toggle-icon {
   transition: transform 0.3s ease;
+}
+
+.transliteration-card .toggle-icon {
+  color: #9a9a9a;
 }
 
 .translation-card .toggle-icon {
@@ -320,12 +328,20 @@
   }
 }
 
+.transliteration-card .card-content p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #2d3748;
+  margin: 0;
+  font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
+}
+
 .translation-card .card-content p {
   font-size: 1.1rem;
   line-height: 1.8;
   color: #2d3748;
   margin: 0;
-  font-family: 'Georgia', 'Times New Roman', serif;
+  font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
   white-space: pre-line;
 }
 
@@ -341,6 +357,7 @@
   font-size: 0.95rem;
   position: relative;
   padding-left: 20px;
+  font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
 }
 
 .sources-card .card-content li:before {

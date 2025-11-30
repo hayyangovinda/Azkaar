@@ -72,7 +72,24 @@
           }
         </div>
 
-        <!-- Card 3: Sources (Collapsible) -->
+        <!-- Card 3: Transliteration (Collapsible) -->
+        <div class="card transliteration-card">
+          <button class="card-toggle" (click)="toggleTransliteration(i)">
+            <span class="card-title">Transliteration</span>
+            <svg class="toggle-icon" [class.expanded]="transliterationExpanded[i]" xmlns="http://www.w3.org/2000/svg"
+              width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          @if (transliterationExpanded[i]) {
+          <div class="card-content">
+            <p>{{ dhikr.transliteration }}</p>
+          </div>
+          }
+        </div>
+
+        <!-- Card 4: Sources (Collapsible) -->
         @if (dhikr.sources && dhikr.sources.length > 0) {
         <div class="card sources-card">
           <button class="card-toggle" (click)="toggleSources(i)">
